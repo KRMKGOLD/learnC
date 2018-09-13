@@ -10,3 +10,5 @@
 
 ## 프로젝트
 1. vacation_project1 : 전화번호 관리 프로젝트  
+
+2. data-structure_class1 : 학생 데이터 저장(자료구조 수업)
