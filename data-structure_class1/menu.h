@@ -22,6 +22,8 @@ Student* stuArr;
 
 void showMenu();
 
+int checkOverLap(int number, char name[]);
+
 void inputFirstData();
 void inputStuNum();
 void inputData();

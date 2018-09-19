@@ -73,6 +73,10 @@ void inputData() {
 	scanf("%d", &stuArr[checkDataIndex].number);
 	printf("이름을 입력하세요. : ");
 	scanf("%s", stuArr[checkDataIndex].name);
+	if (checkOverLap(stuArr[checkDataIndex].number, stuArr[checkDataIndex].name) == -1) {
+		printf("학번과 이름이 중복됩니다. 다시 입력해주세요.\n\n");
+		return;
+	}
 	printf("국어 성적을 입력하세요. : ");
 	scanf("%d", &stuArr[checkDataIndex].kor);
 	printf("영어 성적을 입력하세요. : ");
@@ -81,6 +85,15 @@ void inputData() {
 	scanf("%d", &stuArr[checkDataIndex].math);
 	putchar('\n');
 	checkDataIndex++;
+}
+
+int checkOverLap(int number, char name[]) {
+	for (int i = 0; i < checkDataIndex; i++) {
+		if (strcmp(name, stuArr[i].name) == 0 && number == stuArr[i].number) {
+			return -1;
+		}
+		else return 0;
+	}
 }
 
 void deleteData() {
